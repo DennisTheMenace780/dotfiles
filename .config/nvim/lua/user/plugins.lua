@@ -69,6 +69,11 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp" -- LSP completions
   use "hrsh7th/cmp-nvim-lua"
 
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
 
   -- LSP Packages
   use "neovim/nvim-lspconfig" -- enable LSP
