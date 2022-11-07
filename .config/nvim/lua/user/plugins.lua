@@ -57,10 +57,10 @@ return packer.startup(function(use)
 		vim.api.nvim_command "colorscheme catppuccin"
 	end
 }
+  use "akinsho/toggleterm.nvim"
 
   -- Icon Themes
   use "ryanoasis/vim-devicons"
-
   -- CMP Plugins
   use "hrsh7th/nvim-cmp" -- Completion Plugin
   use "hrsh7th/cmp-buffer" -- Buffer Completions
@@ -68,18 +68,15 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- CMD Line completions
   use "hrsh7th/cmp-nvim-lsp" -- LSP completions
   use "hrsh7th/cmp-nvim-lua"
-
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-
   -- LSP Packages
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/mason.nvim" -- Easy installer for language servers
   use "williamboman/mason-lspconfig.nvim"
-
     -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
