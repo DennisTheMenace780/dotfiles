@@ -58,7 +58,11 @@ return packer.startup(function(use)
 		vim.api.nvim_command "colorscheme catppuccin"
 	end
 }
+  -- Toggleterm 
   use "akinsho/toggleterm.nvim"
+
+  -- Autopairs
+  use "windwp/nvim-autopairs"
 
   -- Icon Themes
   use "ryanoasis/vim-devicons"
