@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/dennisgray/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["buffer_manager.nvim"] = {
+    loaded = true,
+    path = "/Users/dennisgray/.local/share/nvim/site/pack/packer/start/buffer_manager.nvim",
+    url = "https://github.com/j-morano/buffer_manager.nvim"
+  },
   catppuccin = {
     config = { "\27LJ\2\n§\1\0\0\3\0\n\0\0156\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0B\0\1\0016\0\0\0009\0\a\0009\0\b\0'\2\t\0B\0\2\1K\0\1\0\27colorscheme catppuccin\17nvim_command\bapi\nsetup\15catppuccin\frequire\14macchiato\23catppuccin_flavour\6g\bvim\0" },
     loaded = true,
