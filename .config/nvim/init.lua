@@ -9,6 +9,7 @@ require "user.telescope"
 require "user.treesitter"
 require "user.toggleterm"
 require "user.buffer_manager"
+require "user.autopairs"
 
 
 vim.g.netrw_liststyle = 3 -- probably want to move this
