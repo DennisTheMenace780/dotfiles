@@ -45,8 +45,9 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
-  -- Vim Markdown
---   use "preservim/vim-markdown"
+  -- Buffer Managers 
+  use "j-morano/buffer_manager.nvim"
+
   -- Colour Themes
   use {
 	"catppuccin/nvim",
