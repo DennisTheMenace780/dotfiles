@@ -130,6 +130,16 @@ _G.packer_plugins = {
     path = "/Users/dennisgray/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neorg = {
+    loaded = true,
+    path = "/Users/dennisgray/.local/share/nvim/site/pack/packer/start/neorg",
+    url = "https://github.com/nvim-neorg/neorg"
+  },
+  ["neorg-kanban"] = {
+    loaded = true,
+    path = "/Users/dennisgray/.local/share/nvim/site/pack/packer/start/neorg-kanban",
+    url = "https://github.com/max397574/neorg-kanban"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/dennisgray/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
