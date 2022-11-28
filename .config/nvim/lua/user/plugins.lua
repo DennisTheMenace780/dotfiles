@@ -45,11 +45,17 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 
-    -- Neorg 
+	-- Lualine
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
+
+	-- Neorg
 	use({
 		"nvim-neorg/neorg",
 		run = ":Neorg sync-parsers",
-        requires = "max397574/neorg-kanban",
+		requires = "max397574/neorg-kanban",
 	})
 
 	-- Buffer Managers
