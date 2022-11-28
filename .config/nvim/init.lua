@@ -1,4 +1,3 @@
-
 -- Load Options, Keymaps, and Plugins
 require "user.options"
 require "user.keymaps"
@@ -12,6 +11,7 @@ require "user.buffer_manager"
 require "user.autopairs"
 require "user.neorg"
 require "user.lualine"
-
+require "user.neotree"
 
 vim.g.netrw_liststyle = 3 -- probably want to move this
+
