@@ -4,4 +4,16 @@ if not status_ok then
 end
 
 
-buffer_manager.setup {}
+buffer_manager.setup({
+  line_keys = "",  -- deactivate line keybindings
+  select_menu_item_commands = {
+    v = {
+      key = "V",
+      command = "vsplit"
+    },
+    h = {
+      key = "H",
+      command = "split"
+    }
+  }
+})

@@ -9,15 +9,15 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Resize netrdw on open
-keymap("n", "<leader>e", ":Lex 20<cr>", opts)
-
+-- Neotree Keymaps
+keymap('n', '<leader>e', "<cmd>Neotree toggle=true<cr>", opts)
+--
 -- Press jj to enter normal mode
 keymap("i", "jj", "<ESC>", opts)
 
 -- Telescope
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<leader>rg", "<cmd>Telescope live_grep<cr>", opts)
 
-keymap("n", "<leader>bm", "<cmd>lua require'buffer_manager.ui'.toggle_quick_menu()<cr>", opts)
+-- Buffer Manager
+keymap("n", "<C-m>", "<cmd>lua require'buffer_manager.ui'.toggle_quick_menu()<cr>", opts)
