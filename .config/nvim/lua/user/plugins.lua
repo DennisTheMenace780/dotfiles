@@ -45,9 +45,11 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 
+    -- Neorg 
 	use({
 		"nvim-neorg/neorg",
 		run = ":Neorg sync-parsers",
+        requires = "max397574/neorg-kanban",
 	})
 
 	-- Buffer Managers
@@ -63,6 +65,7 @@ return packer.startup(function(use)
 			vim.api.nvim_command("colorscheme catppuccin")
 		end,
 	})
+
 	-- Toggleterm
 	use("akinsho/toggleterm.nvim")
 
@@ -71,6 +74,7 @@ return packer.startup(function(use)
 
 	-- Icon Themes
 	use("ryanoasis/vim-devicons")
+
 	-- CMP Plugins
 	use("hrsh7th/nvim-cmp") -- Completion Plugin
 	use("hrsh7th/cmp-buffer") -- Buffer Completions
@@ -78,19 +82,23 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline") -- CMD Line completions
 	use("hrsh7th/cmp-nvim-lsp") -- LSP completions
 	use("hrsh7th/cmp-nvim-lua")
+
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+
 	-- LSP Packages
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/mason.nvim") -- Easy installer for language servers
 	use("williamboman/mason-lspconfig.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
+
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
+
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
