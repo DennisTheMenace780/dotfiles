@@ -12,6 +12,6 @@ require "user.autopairs"
 require "user.neorg"
 require "user.lualine"
 require "user.neotree"
+require "user.leap"
 
-vim.g.netrw_liststyle = 3 -- probably want to move this
 

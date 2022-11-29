@@ -120,6 +120,11 @@ _G.packer_plugins = {
     path = "/Users/dennisgray/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["leap.nvim"] = {
+    loaded = true,
+    path = "/Users/dennisgray/.local/share/nvim/site/pack/packer/start/leap.nvim",
+    url = "https://github.com/ggandor/leap.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/dennisgray/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -219,6 +224,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dennisgray/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
+  },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/Users/dennisgray/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
   }
 }
 
