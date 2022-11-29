@@ -13,5 +13,5 @@ require "user.neorg"
 require "user.lualine"
 require "user.neotree"
 require "user.leap"
-
+require "user.dapui"
 
