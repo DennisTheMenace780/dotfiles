@@ -45,9 +45,9 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 
-    -- DapUI
-    -- see https://davelage.com/posts/nvim-dap-getting-started/ 
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+	-- DapUI
+	-- see https://davelage.com/posts/nvim-dap-getting-started/
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 
 	-- Leap
 	use({
@@ -56,17 +56,15 @@ return packer.startup(function(use)
 			"tpope/vim-repeat",
 		},
 	})
-
-	-- Neotree
+	-- Nvim-tree
 	use({
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v2.x",
+		"nvim-tree/nvim-tree.lua",
 		requires = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
+			"nvim-tree/nvim-web-devicons", -- optional, for file icons
 		},
+		tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
+
 	-- Lualine
 	use({
 		"nvim-lualine/lualine.nvim",

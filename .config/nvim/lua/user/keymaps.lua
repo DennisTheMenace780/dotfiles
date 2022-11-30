@@ -10,7 +10,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Neotree Keymaps
-keymap('n', '<leader>e', "<cmd>Neotree<cr>", opts)
+keymap('n', '<leader>e', "<cmd>:NvimTreeToggle<cr>", opts)
 --
 -- Press jj to enter normal mode
 keymap("i", "jj", "<ESC>", opts)
