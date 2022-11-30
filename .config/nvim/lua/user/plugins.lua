@@ -45,8 +45,11 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 
-	-- Leap
+    -- DapUI
+    -- see https://davelage.com/posts/nvim-dap-getting-started/ 
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
+	-- Leap
 	use({
 		"ggandor/leap.nvim",
 		requires = {

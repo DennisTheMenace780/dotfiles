@@ -10,7 +10,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Neotree Keymaps
-keymap('n', '<leader>e', "<cmd>Neotree toggle=true<cr>", opts)
+keymap('n', '<leader>e', "<cmd>Neotree<cr>", opts)
 --
 -- Press jj to enter normal mode
 keymap("i", "jj", "<ESC>", opts)
@@ -21,3 +21,7 @@ keymap("n", "<leader>rg", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Buffer Manager
 keymap("n", "<C-m>", "<cmd>lua require'buffer_manager.ui'.toggle_quick_menu()<cr>", opts)
+
+-- Neorg 
+keymap("n", "<F1>", "<cmd>Neorg<cr>", opts)
+keymap("n", "<F1><F1>", ":Neorg workspace ", opts)
