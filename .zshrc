@@ -84,7 +84,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting kubectl)
+plugins=(git zsh-exa zsh-autosuggestions zsh-syntax-highlighting kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,6 +115,19 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias n='nvim'
+
+exa_params=('--icons' '--classify' '--group-directories-first' '--time-style=long-iso' '--group' '--color-scale')
+
+# Exa ... requires brew install exa
+alias ls='exa $exa_params'
+alias l='exa --git-ignore $exa_params'
+alias ll='exa --all --header --long $exa_params'
+alias llm='exa --all --header --long --sort=modified $exa_params'
+alias la='exa -lbhHigUmuSa'
+alias lx='exa -lbhHigUmuSa@'
+alias lt='exa --tree $exa_params'
+alias tree='exa --tree $exa_params'
+
 # Keybindings
 bindkey -v
 
