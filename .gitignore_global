@@ -1,0 +1,4 @@
+.solargraph.yml
+
+.config/*
+!.config/nvim/

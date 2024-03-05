@@ -1,0 +1,35 @@
+alias term-colors='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias n='nvim'
+alias tabbycat="side_projects/golang/tabbycat"
+
+# Jobber Specific
+alias jobber="bin/jobber"
+alias activity_stream_run="bin/rails runner bin/activity_stream_monitor -p -d"
+alias jo="jobber/jobber"
+alias jm="jobber/jobber-mobile"
+alias jobber-keychain='ssh-add --apple-use-keychain ~/.ssh/id_ed25519'
+
+## Setting up NGROK rails.
+alias nrails='USE_NGROK=true rails server'
+alias nprocfile='JOBBER_SERVER_HOSTNAME="dennisg.ngrok.io" bin/jobber procfile'
+alias activity_stream_monitor='bin/rails runner bin/activity_stream_monitor -p -d'
+alias debug_automated_reviews='JOBBER_SERVER_HOSTNAME="dennisg.ngrok.io" bundle exec hutch --config=config/hutch.yml --only-group=automated_reviews'
+
+# Git
+alias js='git status'
+alias ja='git add'
+alias jb='git branch'
+alias jc='git commit'
+
+# Exa (TODO: Replace w/ eza)
+eza_params=('--icons' '--classify' '--group-directories-first' '--time-style=long-iso' '--group' '--color-scale')
+alias ls='eza $eza_params'
+alias l='eza --git-ignore $eza_params'
+alias ll='eza --all --header --long $eza_params'
+alias llm='eza --all --header --long --sort=modified $eza_params'
+alias la='eza -lbhHigUmuSa'
+alias lx='eza -lbhHigUmuSa@'
+alias lt='eza --tree $eza_params'
+alias tree='eza --tree $eza_params'
+
