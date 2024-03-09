@@ -94,9 +94,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 #
 # Unadded Plugins:
-# kubectl
-plugins=(autoswitch_virtualenv virtualenv git virtualenvwrapper zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -123,16 +122,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Source aliases
-#
 source ~/.zshrc.alias
 
 alias ts-node='npx ts-node'
-
-# Exa ... requires brew install exa
-# TODO: Exa is no longer supported, I think the replacement is called eza.
 alias tsr='ts-node -p'
-
-# alias it2py3='/Users/dennisjosephgray/side_projects/iTerm2_soft/Scripts/env_script/iterm2env/versions/3.10.4/bin/python3'
 alias itpy3='/Users/dennisjosephgray/side_projects/iTerm2_soft/Scripts/env_script/.venv/bin/python3'
 alias tc="./tabbycat"
 
@@ -145,16 +138,10 @@ alias tc="./tabbycat"
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Can possibly remove if this doesn't cause any problems
+# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Switches to the correct node version when you enter a directory with a .node-version or .nvmrc file
 eval "$(fnm env --use-on-cd)"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/dennisjosephgray/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
