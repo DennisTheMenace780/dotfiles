@@ -31,9 +31,7 @@ cargo install eza
 
 ## Version managers
 cargo install --git https://github.com/MordechaiHadad/bob.git # Neovim Version Manager
-cargo install fnm # Node Version Manager
 
-fnm install 18
 bob use 0.9.5
 
 # Will try this later once experimented with the movement of dotfiles on the vm 
