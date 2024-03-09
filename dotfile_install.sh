@@ -27,11 +27,6 @@ sudo apt -y install \
 curl https://sh.rustup.rs -sSf | sh
 source "$HOME/.cargo/env"
 
-# Grab ZSH plugins
-# ZSH_CUSTOM = $USER/.oh-my-zsh/custom
-# git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-autosuggestions
-# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-syntax-highlighting
-# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
 cargo install eza
 
 ## Version managers
@@ -42,6 +37,6 @@ fnm install 18
 bob use 0.9.5
 
 # Will try this later once experimented with the movement of dotfiles on the vm 
-# export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+# export ZDOTDIR="$XDG_CONFIG_HOME/zsh" should clear up dotfiles even further
 chsh -s "$(which zsh)"
 
