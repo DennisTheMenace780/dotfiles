@@ -1,20 +1,27 @@
-local servers = {
-	"lua_ls",
-	"pyright",
-	"tsserver",
-	"eslint",
-	"html",
-	"jsonls",
-	"cssls",
-	"tailwindcss",
-	"rust_analyzer",
-	-- "ruby_ls",
-	"bashls",
-	"sqlls",
-	"solargraph",
-	"gopls",
-	"golangci_lint_ls",
-}
+local user = os.getenv("USER")
+local servers = {}
+
+if user == "dennisjosephgray" then
+	servers = {
+		"lua_ls",
+		"pyright",
+		"tsserver",
+		"eslint",
+		"html",
+		"jsonls",
+		"cssls",
+		"tailwindcss",
+		"rust_analyzer",
+		-- "ruby_ls",
+		"bashls",
+		"sqlls",
+		"solargraph",
+		"gopls",
+		"golangci_lint_ls",
+	}
+elseif user == "dennisthemenace" then
+	servers = {}
+end
 
 local settings = {
 	ui = {
@@ -49,7 +56,7 @@ for _, server in pairs(servers) do
 	}
 
 	-- if server == "tsserver" then
- --    -- https://github.com/typescript-language-server/typescript-language-server?tab=readme-ov-file#code-actions-on-save
+	--    -- https://github.com/typescript-language-server/typescript-language-server?tab=readme-ov-file#code-actions-on-save
 	-- 	local function remove()
 	-- 		local params = {
 	-- 			command = "_typescript.addMissingImports",
