@@ -21,6 +21,7 @@ sudo apt -y install \
     gcc \
     fzf \
     zsh \
+    xclip \
     ripgrep 
 
 # Install Rust Ecosystem

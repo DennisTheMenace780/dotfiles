@@ -12,13 +12,15 @@ require("user.treesitter")
 require("user.toggleterm")
 require("user.autopairs")
 require("user.lualine")
-require("user.nvimtree")
 require("user.leap")
 require("user.dapui")
 require("user.gitsigns")
 require("user.telekasten")
+require("user.nvimtree")
+-- require("nvim-tree").setup()
 -- require("user.github")
 
+-- require("nvim-tree").setup({})
 -- vim.api.nvim_create_autocmd("Filetype", {
 -- 	group = vim.api.nvim_create_augroup("colorscheme", { clear = true }),
 -- 	pattern = { "markdown" },
@@ -41,7 +43,7 @@ local group = vim.api.nvim_create_augroup("Ctrl-Scroll", { clear = true })
 vim.api.nvim_create_autocmd("WinResized", {
 	callback = function()
 		vim.opt.scroll = math.floor(0.25 * vim.fn.winheight(0))
-    -- vim.opt.scroll = 25
+		-- vim.opt.scroll = 25
 	end,
 	group = group,
 })
