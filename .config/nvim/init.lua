@@ -17,8 +17,6 @@ require("user.dapui")
 require("user.gitsigns")
 require("user.telekasten")
 require("user.nvimtree")
--- require("nvim-tree").setup()
--- require("user.github")
 
 -- require("nvim-tree").setup({})
 -- vim.api.nvim_create_autocmd("Filetype", {
