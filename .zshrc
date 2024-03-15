@@ -94,7 +94,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 #
 # Unadded Plugins:
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
+plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 
 source $ZSH/oh-my-zsh.sh

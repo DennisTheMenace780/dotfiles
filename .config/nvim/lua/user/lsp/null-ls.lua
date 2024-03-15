@@ -1,3 +1,5 @@
+local log = require("null-ls.logger")
+
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
 	return
@@ -8,16 +10,35 @@ local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
 
+-- extra_args = {
+-- 	"--config",
+-- 	"--arrow-parens",
+-- 	"avoid",
+-- },
+-- extra_args = function(params)
+--     return params.options
+--         and params.options.tabSize
+--         and {
+--             "--tab-width",
+--             params.options.tabSize,
+--         }
+-- end,
 null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.prettier.with({
-			extra_args = {
-				"--config",
-				"--arrow-parens",
-				"avoid",
-			},
-			extra_filetypes = { "rb", "ruby" },
+			extra_args = function(params)
+				if params.filetype == "ruby" then
+					return { "--config", "--plugin=@prettier/plugin-ruby" }
+				end
+
+				return {
+					"--config",
+					"--arrow-parens",
+					"avoid",
+				}
+			end,
+			extra_filetypes = { "ruby" },
 		}),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
@@ -25,10 +46,9 @@ null_ls.setup({
 		formatting.sql_formatter,
 		formatting.golines,
 		formatting.gofmt,
-		diagnostics.rubocop.with({ extra_args = { "--config", "rubocop_base.yml" } }),
-    -- formatting.rubocop,
+		-- formatting.rubocop.with({ extra_args = { "--config", "rubocop_base.yml" } }),
+		diagnostics.rubocop,
 		-- formatting.rubocop.with({extra_args = {"--auto-correct"}})
-		-- diagnostics.rubocop
 	},
 	diagnostics_format = "[#{c}] #{m} (#{s})",
 })

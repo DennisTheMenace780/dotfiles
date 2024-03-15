@@ -14,10 +14,8 @@ require("user.autopairs")
 require("user.lualine")
 require("user.nvimtree")
 require("user.leap")
-require("user.dapui")
 require("user.gitsigns")
 require("user.telekasten")
--- require("user.github")
 
 -- vim.api.nvim_create_autocmd("Filetype", {
 -- 	group = vim.api.nvim_create_augroup("colorscheme", { clear = true }),
