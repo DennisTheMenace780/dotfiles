@@ -18,3 +18,5 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Ruby Provider
 vim.g.ruby_host_prog = "/Users/dennisjosephgray/.rvm/gems/ruby-3.2.2/bin/neovim-ruby-host"
+
+
