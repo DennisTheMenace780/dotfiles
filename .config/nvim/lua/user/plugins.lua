@@ -50,12 +50,12 @@ return packer.startup(function(use)
 	use({ "windwp/nvim-ts-autotag" })
 	-- DapUI
 	-- see https://davelage.com/posts/nvim-dap-getting-started/
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	-- use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 
-	use({
-		"ldelossa/gh.nvim",
-		requires = { { "ldelossa/litee.nvim" } },
-	})
+	-- use({
+	-- 	"ldelossa/gh.nvim",
+	-- 	requires = { { "ldelossa/litee.nvim" } },
+	-- })
 
 	-- Telekastin
 	use({ "renerocksai/telekasten.nvim", requires = {} })
@@ -97,11 +97,9 @@ return packer.startup(function(use)
 	})
 
 	-- Colorschemes
-	use("AlexvZyl/nordic.nvim")
 	use("catppuccin/nvim")
 	use("rebelot/kanagawa.nvim")
 	use("EdenEast/nightfox.nvim")
-	use({ "folke/tokyonight.nvim" })
 
 	-- Toggleterm
 	use("akinsho/toggleterm.nvim")
@@ -142,7 +140,7 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/mason.nvim") -- Easy installer for language servers
 	use("williamboman/mason-lspconfig.nvim")
-	use("jose-elias-alvarez/null-ls.nvim")
+	use("nvimtools/none-ls.nvim")
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
