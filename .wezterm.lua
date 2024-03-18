@@ -5,6 +5,9 @@ local act = wezterm.action
 -- This will hold the configuration
 local config = wezterm.config_builder()
 
+config.window_frame = {
+	font_size = 10,
+}
 -- This is where config choices are made
 config.keys = {
 	-- This will create a new split and run the `top` program inside it
@@ -66,46 +69,7 @@ config.keys = {
 		action = wezterm.action.ActivatePaneDirection("Right"),
 	},
 }
--- config.keys = {
--- 	{
--- 		key = "h",
--- 		mods = "Super",
--- 		action = act.SplitPane({
--- 			direction = "Left",
--- 			size = { Percent = 50 },
--- 		}),
--- 	},
--- 	{
--- 		key = "j",
--- 		mods = "Super",
--- 		action = act.SplitPane({
--- 			direction = "Down",
--- 			size = { Percent = 50 },
--- 		}),
--- 	},
--- 	{
--- 		key = "k",
--- 		mods = "Super",
--- 		action = act.SplitPane({
--- 			direction = "Up",
--- 			size = { Percent = 50 },
--- 		}),
--- 	},
--- 	{
--- 		key = "l",
--- 		mods = "Super",
--- 		action = act.SplitPane({
--- 			direction = "Right",
--- 			size = { Percent = 50 },
--- 		}),
--- 	},
--- 	{
--- 		key = "w",
--- 		mods = "Super",
--- 		action = act.CloseCurrentPane({ confirm = false }),
--- 	},
--- }
--- config.color_scheme = "AdventureTime"
+
 config.colors = {
 	foreground = "ffffff",
 	background = "black",
@@ -130,14 +94,18 @@ config.colors = {
 		"#fffeff",
 	},
 }
+config.inactive_pane_hsb = {
+  saturation = 0.9,
+  brightness = 0.7,
+}
 
 config.font_dirs = { "$HOME/.local/share/fonts/NerdFonts/" }
 config.font = wezterm.font({
 	family = "Fira Code Nerd Font",
-	weight = "Regular",
+	weight = "Medium",
 })
-config.font_size = 11
-config.underline_position = "-20px"
+config.font_size = 9
+config.underline_position = "-2px"
 
 -- For copy and pasting with right click
 -- config.mouse_bindings = {

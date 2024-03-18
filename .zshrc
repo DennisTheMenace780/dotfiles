@@ -2,11 +2,13 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
-# Probably can move this somewehre else
-if [ "$(uname)" = "Linux"]; then
-  # Set the keyboard repeat rate
-  xset r rate 200 30
-fi
+## ASDF
+# Makes asdf accessible on the command line
+. "$HOME/.asdf/asdf.sh"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
 
 # Set any XDG specifications
 if [[ -z "$XDG_CONFIG_HOME" ]]; then
@@ -100,7 +102,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 #
 # Unadded Plugins:
-plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
+plugins=(git asdf fzf-tab zsh-fzf-history-search zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 
 source $ZSH/oh-my-zsh.sh

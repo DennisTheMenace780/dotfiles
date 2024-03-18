@@ -19,8 +19,8 @@ if user == "dennisjosephgray" then
 		"gopls",
 		"golangci_lint_ls",
 	}
-elseif user == "dennisthemenace" then
-	servers = {}
+elseif user == "dennis" then
+	servers = {"bashls"}
 end
 
 local settings = {

@@ -1,5 +1,3 @@
-local log = require("null-ls.logger")
-
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
 	return
@@ -10,19 +8,6 @@ local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 local diagnostics = null_ls.builtins.diagnostics
 
--- extra_args = {
--- 	"--config",
--- 	"--arrow-parens",
--- 	"avoid",
--- },
--- extra_args = function(params)
---     return params.options
---         and params.options.tabSize
---         and {
---             "--tab-width",
---             params.options.tabSize,
---         }
--- end,
 null_ls.setup({
 	debug = false,
 	sources = {
@@ -46,6 +31,7 @@ null_ls.setup({
 		formatting.sql_formatter,
 		formatting.golines,
 		formatting.gofmt,
+    formatting.shfmt,
 		-- formatting.rubocop.with({ extra_args = { "--config", "rubocop_base.yml" } }),
 		diagnostics.rubocop,
 		-- formatting.rubocop.with({extra_args = {"--auto-correct"}})
