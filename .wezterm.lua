@@ -71,14 +71,34 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ActivatePaneDirection("Right"),
 	},
+	{
+		key = "h",
+		mods = "CTRL|CMD",
+		action = act.AdjustPaneSize({ "Left", 5 }),
+	},
+	{
+		key = "l",
+		mods = "CTRL|CMD",
+		action = act.AdjustPaneSize({ "Right", 5 }),
+	},
+	{
+		key = "j",
+		mods = "CTRL|CMD",
+		action = act.AdjustPaneSize({ "Down", 5 }),
+	},
+	{
+		key = "k",
+		mods = "CTRL|CMD",
+		action = act.AdjustPaneSize({ "Up", 5 }),
+	},
 }
 
 config.colors = {
 	foreground = "ffffff",
 	background = "black",
-  cursor_bg = '#c2ff00',
-  cursor_border = '#c2ff00',
-  split = "#ff6699",
+	cursor_bg = "#c2ff00",
+	cursor_border = "#c2ff00",
+	split = "#ff6699",
 	ansi = {
 		"#000000",
 		"#ff4c41",
@@ -101,14 +121,18 @@ config.colors = {
 	},
 }
 config.inactive_pane_hsb = {
-  saturation = 0.9,
-  brightness = 0.7,
+	saturation = 0.9,
+	brightness = 0.7,
 }
 
-config.font_dirs = { "$HOME/.local/share/fonts/NerdFonts/" }
-config.font = wezterm.font({
-	family = "Fira Code Nerd Font",
-	weight = "Medium",
+config.font_dirs = { "$HOME/.local/share/fonts/NerdFonts/", "$HOME/Library/Fonts" }
+-- config.font = wezterm.font({
+-- 	family = "Fira Code Nerd Font",
+-- 	weight = "Medium",
+-- })
+config.font = wezterm.font_with_fallback({
+	{ family = "FiraCode Nerd Font", weight = "Medium", scale = 1.3 },
+	{ family = "Fira Code Nerd Font", weight = "Medium" },
 })
 config.font_size = 9
 config.underline_position = "-2px"
