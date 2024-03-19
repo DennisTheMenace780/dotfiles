@@ -8,6 +8,9 @@ local config = wezterm.config_builder()
 config.window_frame = {
 	font_size = 10,
 }
+
+config.initial_cols = 160
+config.initial_rows = 80
 -- This is where config choices are made
 config.keys = {
 	-- This will create a new split and run the `top` program inside it
@@ -73,6 +76,9 @@ config.keys = {
 config.colors = {
 	foreground = "ffffff",
 	background = "black",
+  cursor_bg = '#c2ff00',
+  cursor_border = '#c2ff00',
+  split = "#ff6699",
 	ansi = {
 		"#000000",
 		"#ff4c41",

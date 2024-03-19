@@ -20,7 +20,7 @@ if user == "dennisjosephgray" then
 		"golangci_lint_ls",
 	}
 elseif user == "dennis" then
-	servers = {"bashls"}
+	servers = {"bashls", "lua_ls"}
 end
 
 local settings = {
