@@ -4,7 +4,10 @@
 
 ## ASDF
 # Makes asdf accessible on the command line
-. "$HOME/.asdf/asdf.sh"
+if [[ -f "$HOME/.asdf/asdf.sh" ]]; then
+    . "$HOME/.asdf/asdf.sh"
+fi
+
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
@@ -102,7 +105,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 #
 # Unadded Plugins:
-plugins=(git asdf fzf-tab zsh-fzf-history-search zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
+plugins=(git asdf fzf-tab zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 
 source $ZSH/oh-my-zsh.sh
