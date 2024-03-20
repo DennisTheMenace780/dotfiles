@@ -131,8 +131,8 @@ config.font_dirs = { "$HOME/.local/share/fonts/NerdFonts/", "$HOME/Library/Fonts
 -- 	weight = "Medium",
 -- })
 config.font = wezterm.font_with_fallback({
-	{ family = "FiraCode Nerd Font", weight = "Medium", scale = 1.3 },
 	{ family = "Fira Code Nerd Font", weight = "Medium" },
+	{ family = "FiraCode Nerd Font", weight = "Medium", scale = 1.3 },
 })
 config.font_size = 9
 config.underline_position = "-2px"

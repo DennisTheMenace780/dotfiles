@@ -6,7 +6,10 @@
 # Makes asdf accessible on the command line
 if [[ -f "$HOME/.asdf/asdf.sh" ]]; then
     . "$HOME/.asdf/asdf.sh"
+
 fi
+
+. ~/.asdf/plugins/golang/set-env.zsh
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
@@ -105,7 +108,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 #
 # Unadded Plugins:
-plugins=(git asdf fzf-tab zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
+plugins=(git asdf zsh-fzf-history-search fzf-tab zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 
 source $ZSH/oh-my-zsh.sh

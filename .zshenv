@@ -14,6 +14,7 @@ export LESS="-F -g -i -M -R -S -w -X -z-4"
 
 export ZSH_FZF_HISTORY_SEARCH_EVENT_NUMBERS=0
 export ZSH_FZF_HISTORY_SEARCH_DATES_IN_SEARCH=0
+export ZSH_FZF_HISTORY_SEARCH_REMOVE_DUPLICATES=1
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
