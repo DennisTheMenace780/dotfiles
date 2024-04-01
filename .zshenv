@@ -5,6 +5,11 @@ if [ -e "$HOME/.zshenv.jobber" ]; then
     source "$HOME/.zshenv.jobber"
 fi
 
+if [ -e "$HOME/.zshenv.dennis" ]; then
+    source "$HOME/.zshenv.dennis"
+    export PATH=$PATH:"$HOME/dev/tabbykat"
+fi
+
 export PATH=$PATH:"$HOME/.local/share/bob/nvim-bin"
 # To remove this alias you'll need to remove the repo in that location too
 export PATH=$PATH:"/usr/local/bin/tabbyKat"
