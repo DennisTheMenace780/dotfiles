@@ -11,7 +11,7 @@ local colorscheme = "catppuccin"
 require("catppuccin").setup({
 	transparent_background = false,
 	no_italic = true,
-  flavour = "macchiato"
+  flavour = "frappe"
 })
 
 
