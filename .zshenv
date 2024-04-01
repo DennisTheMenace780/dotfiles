@@ -5,6 +5,11 @@ if [ -e "$HOME/.zshenv.jobber" ]; then
     source "$HOME/.zshenv.jobber"
 fi
 
+if [ -e "$HOME/.zshenv.dennis" ]; then
+    source "$HOME/.zshenv.dennis"
+    export PATH=$PATH:"$HOME/dev/tabbykat"
+fi
+
 export PATH=$PATH:"$HOME/.local/share/bob/nvim-bin"
 
 export OPENAI_API_KEY="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"
