@@ -11,6 +11,8 @@ if [ -e "$HOME/.zshenv.dennis" ]; then
 fi
 
 export PATH=$PATH:"$HOME/.local/share/bob/nvim-bin"
+# To remove this alias you'll need to remove the repo in that location too
+export PATH=$PATH:"/usr/local/bin/tabbyKat"
 
 export OPENAI_API_KEY="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"
 
