@@ -1,4 +1,5 @@
 local colorscheme = "catppuccin"
+local catppuccin_flavour = "frappe"
 -- local colorscheme = "duskfox"
 -- local colorscheme = "terafox"
 --
@@ -6,14 +7,22 @@ local colorscheme = "catppuccin"
 -- if not status_ok then
 -- 	return
 -- end
---
+
+if os.getenv("PWD") == "/Users/dennisjosephgray/zettelkasten" then
+  colorscheme = "everforest"
+end
+
+require("everforest").setup({
+  colours_override = function (palette)
+    palette.red = "#b86466"
+  end
+})
 
 require("catppuccin").setup({
 	transparent_background = false,
 	no_italic = true,
-  flavour = "macchiato"
+	flavour = catppuccin_flavour,
 })
-
 
 -- NIGHT FOX https://github.com/EdenEast/nightfox.nvim
 require("nightfox").setup({
