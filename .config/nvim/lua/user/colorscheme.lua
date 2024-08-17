@@ -1,5 +1,5 @@
 local colorscheme = "catppuccin"
-local catppuccin_flavour = "frappe"
+-- local catppuccin_flavour = "frappe"
 -- local colorscheme = "duskfox"
 -- local colorscheme = "terafox"
 --

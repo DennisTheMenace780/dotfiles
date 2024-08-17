@@ -45,7 +45,30 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 
-	-- use("prettier/vim-prettier")
+  use {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    requires = { {"nvim-lua/plenary.nvim"} }
+}
+
+	use("mfussenegger/nvim-lint")
+
+  use("github/copilot.vim")
+
+	use({
+		"nvimtools/none-ls.nvim",
+		requires = {
+			"nvimtools/none-ls-extras.nvim",
+		},
+	})
+
+	use({
+		"pmizio/typescript-tools.nvim",
+		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		config = function()
+			require("typescript-tools").setup({})
+		end,
+	})
 
 	use({
 		"neanias/everforest-nvim",
@@ -148,7 +171,6 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/mason.nvim") -- Easy installer for language servers
 	use("williamboman/mason-lspconfig.nvim")
-	use("nvimtools/none-ls.nvim")
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine

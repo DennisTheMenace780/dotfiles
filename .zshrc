@@ -138,10 +138,12 @@ source $ZSH/oh-my-zsh.sh
 # Source aliases
 source ~/.zshrc.alias
 
+# Run jobber-keychain
+jobber-keychain
+
 alias ts-node='npx ts-node'
 alias tsr='ts-node -p'
 alias itpy3='/Users/dennisjosephgray/side_projects/iTerm2_soft/Scripts/env_script/.venv/bin/python3'
-alias tc="./tabbycat"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -159,3 +161,8 @@ alias tc="./tabbycat"
 eval "$(fnm env --use-on-cd)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/dennisjosephgray/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+#

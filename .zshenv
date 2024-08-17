@@ -23,6 +23,8 @@ export ZSH_FZF_HISTORY_SEARCH_EVENT_NUMBERS=0
 export ZSH_FZF_HISTORY_SEARCH_DATES_IN_SEARCH=0
 export ZSH_FZF_HISTORY_SEARCH_REMOVE_DUPLICATES=1
 
+export ESLINT_D_LOCAL_ESLINT_ONLY=1
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 

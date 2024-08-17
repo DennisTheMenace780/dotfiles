@@ -1,6 +1,7 @@
 -- Vim Options
 -- vim.opt.relativenumber = true -- Shows relative line numbers
 vim.opt.number = true -- Shows current line number
+-- vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.swapfile = false -- Creates swap files
 vim.opt.smartindent = true -- Smart indenting on new lines

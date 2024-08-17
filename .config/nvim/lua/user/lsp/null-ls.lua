@@ -9,7 +9,7 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
-	debug = false,
+	debug = true,
 	sources = {
 		formatting.prettier.with({
 			extra_args = function(params)
@@ -30,10 +30,13 @@ null_ls.setup({
 		formatting.sql_formatter,
 		formatting.golines,
 		formatting.gofmt,
-    formatting.shfmt,
+		formatting.shfmt,
+		formatting.clang_format,
 		-- formatting.rubocop.with({ extra_args = { "--config", "rubocop_base.yml" } }),
-		diagnostics.rubocop,
 		-- formatting.rubocop.with({extra_args = {"--auto-correct"}})
+		diagnostics.rubocop,
+		require("none-ls.code_actions.eslint_d"),
+		-- require("none-ls.diagnostics.eslint_d"),
 	},
 	diagnostics_format = "[#{c}] #{m} (#{s})",
 })

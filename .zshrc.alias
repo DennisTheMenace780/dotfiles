@@ -1,7 +1,8 @@
 alias term-colors='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias n='nvim'
-alias tabbycat="side_projects/golang/tabbycat"
+
+alias kat='~/side_projects/golang/tabbyKat/tabbykat-delete'
 
 # Jobber Specific
 alias jobber="bin/jobber"

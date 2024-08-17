@@ -5,14 +5,15 @@ if user == "dennisjosephgray" then
 	servers = {
 		"lua_ls",
 		"pyright",
-		"tsserver",
-		"eslint",
+		-- "tsserver",
+		-- "eslint",
 		"html",
 		"jsonls",
 		"cssls",
 		"tailwindcss",
 		"rust_analyzer",
 		-- "ruby_ls",
+    "clangd",
 		"bashls",
 		"sqlls",
 		"solargraph",
@@ -55,23 +56,6 @@ for _, server in pairs(servers) do
 		capabilities = require("user.lsp.handlers").capabilities,
 	}
 
-	-- if server == "tsserver" then
-	--    -- https://github.com/typescript-language-server/typescript-language-server?tab=readme-ov-file#code-actions-on-save
-	-- 	local function remove()
-	-- 		local params = {
-	-- 			command = "_typescript.addMissingImports",
-	-- 			arguments = { vim.api.nvim_buf_get_name(0) },
-	-- 			title = "",
-	-- 		}
-	-- 		vim.lsp.buf.execute_command(params)
-	-- 	end
-	-- 	opts["commands"] = {
-	-- 		Remove = {
-	-- 			remove,
-	-- 			description = "RemoveUnused",
-	-- 		},
-	-- 	}
-	-- end
 	server = vim.split(server, "@")[1]
 
 	local require_ok, conf_opts = pcall(require, "user.lsp.settings." .. server)

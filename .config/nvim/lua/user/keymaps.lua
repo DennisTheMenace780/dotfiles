@@ -9,15 +9,26 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Copilot
+vim.keymap.set("i", "<C-y>", 'copilot#Accept("")', {
+	expr = true,
+	replace_keycodes = false,
+})
+vim.g.copilot_no_tab_map = true
+
 -- ESLint Server
-keymap("n", "<leader>le", "<cmd>:EslintFixAll<cr>", opts)
+-- keymap("n", "<leader>le", "<cmd>:EslintFixAll<cr>", opts)
+keymap("n", "<leader>le", "<cmd>:!eslint_d --fix --cache %<cr>", opts)
+
+-- Typescript Tools
+keymap("n", "<leader>lt", "<cmd>:TSToolsFixAll<cr>", opts)
 
 -- Neotree Keymaps
-keymap("n", "<leader>E", "<cmd>:NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>ef", "<cmd>:NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>e", "<cmd>:NvimTreeFocus<cr>", opts)
 
 -- Press jj to enter normal mode
-keymap("i", "jj", "<ESC>", opts)
+keymap("i", "kk", "<ESC>", opts)
 keymap("v", "<C-C>", '"+y', opts)
 
 -- Vertical Movements
@@ -83,3 +94,4 @@ keymap("n", "<leader>tt", ":lua require('telekasten').follow_link()<CR>", opts)
 keymap("n", "<leader>tc", ":lua require('telekasten').show_calendar()<CR>", opts)
 keymap("n", "<leader>tv", ":lua require('telekasten').switch_vault()<CR>", opts)
 keymap("n", "<leader>tn", ":lua require('telekasten').new_note()<CR>", opts)
+
