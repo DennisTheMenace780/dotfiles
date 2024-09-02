@@ -6,6 +6,7 @@ end
 nvim_lint.linters_by_ft = {
 	typescript = { "eslint_d" },
 	typescriptreact = { "eslint_d" },
+  css = { "stylelint" },
 }
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "TextChanged" }, {

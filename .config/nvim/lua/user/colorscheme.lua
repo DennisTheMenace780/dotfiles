@@ -1,6 +1,6 @@
 local colorscheme = "catppuccin"
 -- local catppuccin_flavour = "frappe"
--- local colorscheme = "duskfox"
+-- local colorscheme = "nightfox"
 -- local colorscheme = "terafox"
 --
 -- local status_ok, theme = pcall(require, colorscheme)
@@ -9,14 +9,8 @@ local colorscheme = "catppuccin"
 -- end
 
 if os.getenv("PWD") == "/Users/dennisjosephgray/zettelkasten" then
-  colorscheme = "everforest"
+  colorscheme = "nightfox"
 end
-
-require("everforest").setup({
-  colours_override = function (palette)
-    palette.red = "#b86466"
-  end
-})
 
 require("catppuccin").setup({
 	transparent_background = false,

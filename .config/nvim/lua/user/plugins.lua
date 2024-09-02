@@ -45,15 +45,17 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 
-  use {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    requires = { {"nvim-lua/plenary.nvim"} }
-}
+	use("stevearc/conform.nvim")
+
+	use({
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
 
 	use("mfussenegger/nvim-lint")
 
-  use("github/copilot.vim")
+	use("github/copilot.vim")
 
 	use({
 		"nvimtools/none-ls.nvim",
@@ -70,13 +72,7 @@ return packer.startup(function(use)
 		end,
 	})
 
-	use({
-		"neanias/everforest-nvim",
-		-- Optional; default configuration will be used if setup isn't called.
-		config = function()
-			require("everforest").setup()
-		end,
-	})
+	use("rmehri01/onenord.nvim")
 
 	use({ "windwp/nvim-ts-autotag" })
 	-- DapUI

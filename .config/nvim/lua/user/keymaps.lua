@@ -9,6 +9,9 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- -- Formatting
+-- keymap("n", "<leader>lf", ":Format<CR>", opts)
+
 -- Copilot
 vim.keymap.set("i", "<C-y>", 'copilot#Accept("")', {
 	expr = true,

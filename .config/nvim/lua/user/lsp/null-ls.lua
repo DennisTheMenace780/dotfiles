@@ -17,17 +17,15 @@ null_ls.setup({
 					return { "--config", "--plugin=@prettier/plugin-ruby" }
 				end
 
-				return {
-					"--config",
-					"--arrow-parens",
-					"avoid",
-				}
+				-- return {
+				-- 	"--config",
+				-- 	"--arrow-parens",
+				-- 	"avoid",
+				-- }
 			end,
 			extra_filetypes = { "ruby" },
 		}),
 		formatting.black.with({ extra_args = { "--fast" } }),
-		formatting.stylua,
-		formatting.sql_formatter,
 		formatting.golines,
 		formatting.gofmt,
 		formatting.shfmt,
@@ -36,12 +34,6 @@ null_ls.setup({
 		-- formatting.rubocop.with({extra_args = {"--auto-correct"}})
 		diagnostics.rubocop,
 		require("none-ls.code_actions.eslint_d"),
-		-- require("none-ls.diagnostics.eslint_d"),
 	},
 	diagnostics_format = "[#{c}] #{m} (#{s})",
 })
--- Helps with rust-analyzer finding projects
--- "rust-analyzer.linkedProjects": [
---         "Cargo.toml",
---         "cross/Cargo.toml",
---     ]

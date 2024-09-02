@@ -19,23 +19,9 @@ require("user.nvimtree")
 require("user.nvimlint")
 require("user.copilot")
 require("user.harpoon")
-
--- ::require("nvim-tree").setup({})
--- vim.api.nvim_create_autocmd("Filetype", {
--- 	group = vim.api.nvim_create_augroup("colorscheme", { clear = true }),
--- 	pattern = { "markdown" },
--- 	command = "colorscheme dayfox",
--- })
--- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
---   pattern = { "*" },
---   command = [[%s/\s\+$//e]],
--- })
---
+require("user.conform")
 
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#D6D6D6" })
-
-
--- vim.api.nvim_set_hl(0, "CopilotSuggesion", { fg = "#cbb4e4" })
 
 vim.api.nvim_create_autocmd({ "BufEnter" }, { pattern = { "*.md" }, command = [[set filetype=markdown]] })
 -- vim.api.nvim_command([[
@@ -43,9 +29,7 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, { pattern = { "*.md" }, command = [[
 --   autocmd FileType buffer_manager vnoremap K :m '<-2<CR>gv=gv
 -- ]])
 
-
--- print a function in javascript
--- 
+--
 local group = vim.api.nvim_create_augroup("Ctrl-Scroll", { clear = true })
 vim.api.nvim_create_autocmd("WinResized", {
 	callback = function()
